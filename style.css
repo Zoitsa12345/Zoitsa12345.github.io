@@ -8,17 +8,7 @@ body {
     background-color: #f0f0f0;
 }
 
-.piano-container {
-    position: relative;
-    border: 2px solid #000;
-    border-radius: 10px;
-    width: 600px;
-    height: 200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 10px;
-}
+
 /* Basic styling for the piano keys */
 .piano {
     display: flex;
