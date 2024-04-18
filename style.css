@@ -1,4 +1,10 @@
-
+/* Basic styling for the piano keys */
+.piano {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+}
 
 .white-key, .black-key {
     width: 50px;
@@ -12,10 +18,12 @@
     font-weight: bold;
 }
 
-
+.white-key {
+    position: relative;
+}
 
 .black-key {
-    position: relative;
+    position: absolute;
     background-color: #000;
     color: #fff;
     width: 30px;
