@@ -24,3 +24,11 @@
     margin-left: -25px;
     z-index: 1;
 }
+
+/* Adjust positions of black keys */
+[data-note="C#"] { left: 35px; }
+[data-note="D#"] { left: 85px; }
+[data-note="F#"] { left: 185px; }
+[data-note="G#"] { left: 235px; }
+[data-note="A#"] { left: 285px; }
+
