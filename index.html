@@ -1,1 +1,37 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="piano">
+        <!-- White keys -->
+        <div class="white-key" data-note="C">C</div>
+        <div class="white-key" data-note="D">D</div>
+        <div class="white-key" data-note="E">E</div>
+        <div class="white-key" data-note="F">F</div>
+        <div class="white-key" data-note="G">G</div>
+        <div class="white-key" data-note="A">A</div>
+        <div class="white-key" data-note="B">B</div>
+
+        <!-- Black keys -->
+        <div class="black-key" data-note="C#">C#</div>
+        <div class="black-key" data-note="D#">D#</div>
+        <div class="black-key" data-note="F#">F#</div>
+        <div class="black-key" data-note="G#">G#</div>
+        <div class="black-key" data-note="A#">A#</div>
+    </div>
+
+    <!-- Audio files for each note -->
+    <audio id="C" src="C.mp3"></audio>
+    <audio id="D" src="D.mp3"></audio>
+    <!-- Add more audio files for other notes -->
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
