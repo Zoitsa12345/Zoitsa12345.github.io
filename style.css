@@ -34,7 +34,7 @@ body {
 }
 
 .black-key {
-    position: absolute;
+    position: relative;
     background-color: #000;
     color: #fff;
     width: 30px;
