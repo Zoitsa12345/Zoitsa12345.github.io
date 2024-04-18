@@ -33,6 +33,10 @@ body {
     position: relative;
 }
 
+.white-key {
+    position: relative;
+}
+
 .black-key {
     background-color: #000;
     color: #fff;
