@@ -26,9 +26,9 @@
 }
 
 /* Adjust positions of black keys */
-[data-note="C#"] { left: 35px; }
-[data-note="D#"] { left: 85px; }
-[data-note="F#"] { left: 185px; }
-[data-note="G#"] { left: 235px; }
-[data-note="A#"] { left: 285px; }
+[data-note="C#"] { left: 135px; }
+[data-note="D#"] { left: 185px; }
+[data-note="F#"] { left: 285px; }
+[data-note="G#"] { left: 335px; }
+[data-note="A#"] { left: 385px; }
 
