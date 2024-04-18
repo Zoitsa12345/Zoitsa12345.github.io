@@ -1,13 +1,5 @@
 
 
-/* Basic styling for the piano keys */
-.piano {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 5px;
-}
-
 .white-key, .black-key {
     width: 50px;
     height: 200px;
