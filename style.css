@@ -1,72 +1,32 @@
 /* styles.css */
-
-/* Reset default margin and padding */
-body, div {
-    margin: 0;
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-/* Set background color for the entire keyboard */
-.keyboard {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: #f0f0f0;
-    height: 200px;
-    padding: 10px;
+h1 {
+    color: #333;
 }
 
-/* Style white keys */
-.white-key {
-    width: 30px;
-    height: 120px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    margin-right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+.note-buttons {
+    margin-top: 20px;
 }
 
-/* Style black keys */
-.black-key {
-    width: 20px;
-    height: 80px;
-    background-color: #000000;
-    margin-right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1;
-}
-
-/* Adjust position of black keys */
-.black-key:nth-child(2),
-.black-key:nth-child(4),
-.black-key:nth-child(7),
-.black-key:nth-child(9),
-.black-key:nth-child(11) {
-    margin-left: -15px;
-}
-
-/* Add labels to keys */
-.white-key::before,
-.black-key::before {
-    content: attr(data-note);
-    font-size: 12px;
-    color: #000000;
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Hover effect for keys */
-.white-key:hover,
-.black-key:hover {
-    background-color: #e0e0e0;
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.white-note {
+    background-color: #fff;
+    color: #333;
+}
+
+.black-note {
+    background-color: #000;
+    color: #fff;
 }
