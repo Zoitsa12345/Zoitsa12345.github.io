@@ -1,4 +1,17 @@
-/* Basic styling for the piano keys */
+:root {
+    --key-width: 50px;
+    --key-height: 200px;
+    --black-key-offset: -30px;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --key-width: 30px;
+        --key-height: 120px;
+        --black-key-offset: -18px;
+    }
+}
+
 .piano {
     display: flex;
     justify-content: center;
@@ -7,8 +20,8 @@
 }
 
 .white-key, .black-key {
-    width: 50px;
-    height: 200px;
+    width: var(--key-width);
+    height: var(--key-height);
     border: 1px solid #000;
     background-color: #fff;
     cursor: pointer;
@@ -21,14 +34,14 @@
 .black-key {
     background-color: #000;
     color: #fff;
-    margin-left: -30px;
+    margin-left: var(--black-key-offset);
     z-index: 1;
 }
 
 /* Adjust positions of black keys */
-[data-note="C#"] { left: 135px; }
-[data-note="D#"] { left: 185px; }
-[data-note="F#"] { left: 285px; }
-[data-note="G#"] { left: 335px; }
-[data-note="A#"] { left: 385px; }
+[data-note="C#"] { left: calc(3 * var(--key-width)); }
+[data-note="D#"] { left: calc(4 * var(--key-width)); }
+[data-note="F#"] { left: calc(6 * var(--key-width)); }
+[data-note="G#"] { left: calc(7 * var(--key-width)); }
+[data-note="A#"] { left: calc(8 * var(--key-width)); }
 
