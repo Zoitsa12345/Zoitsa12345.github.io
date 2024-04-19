@@ -16,26 +16,30 @@ body {
 .white-key {
     width: 50px;
     height: 200px;
-    background-color: white;
+    background-color: #f9f9f9;
     border: 1px solid #000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     font-size: 16px;
     font-weight: bold;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .black-key {
     width: 30px;
     height: 120px;
-    background-color: black;
+    background-color: #333;
     color: white;
     border: 1px solid #000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     font-size: 14px;
     font-weight: bold;
     position: relative;
     top: -60px;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
