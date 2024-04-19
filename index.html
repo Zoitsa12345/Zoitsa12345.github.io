@@ -4,7 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piano</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --key-width: 50px;
+            --key-height: 200px;
+            --black-key-offset: -30px;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --key-width: 30px;
+                --key-height: 120px;
+                --black-key-offset: -18px;
+            }
+        }
+
+        .piano {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 5px;
+        }
+
+        .white-key, .black-key {
+            width: var(--key-width);
+            height: var(--key-height);
+            border: 1px solid #000;
+            background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .black-key {
+            background-color: #000;
+            color: #fff;
+            margin-left: var(--black-key-offset);
+            z-index: 1;
+        }
+
+        /* Adjust positions of black keys */
+        [data-note="C#"] { left: calc(3 * var(--key-width)); }
+        [data-note="D#"] { left: calc(4 * var(--key-width)); }
+        [data-note="F#"] { left: calc(6 * var(--key-width)); }
+        [data-note="G#"] { left: calc(7 * var(--key-width)); }
+        [data-note="A#"] { left: calc(8 * var(--key-width)); }
+    </style>
 </head>
 <body>
     <div class="piano">
