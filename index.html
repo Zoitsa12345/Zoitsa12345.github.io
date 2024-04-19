@@ -1,2 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Keys</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .circle.c {
+            background-color: #ff6347; /* Red for C */
+        }
+
+        .circle.d {
+            background-color: #00bfff; /* Blue for D */
+        }
+
+        .circle.e {
+            background-color: #32cd32; /* Green for E */
+        }
+    </style>
+</head>
+<body>
+    <div class="circle c" onclick="playSound('C-piano.wav')">C</div>
+    <div class="circle d" onclick="playSound('D-piano.wav')">D</div>
+    <div class="circle e" onclick="playSound('E-piano.wav')">E</div>
+
+    <script>
+        function playSound(soundFile) {
+            const audio = new Audio(soundFile);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+
 
 
