@@ -6,16 +6,16 @@
     <title>Piano</title>
     <style>
         :root {
-            --key-width: 50px;
-            --key-height: 200px;
-            --black-key-offset: -30px;
+            --key-width: 20px;
+            --key-height: 100px;
+            --black-key-offset: 0px;
         }
 
         @media (max-width: 600px) {
             :root {
-                --key-width: 30px;
-                --key-height: 120px;
-                --black-key-offset: -18px;
+                --key-width: 20px;
+                --key-height: 100px;
+                --black-key-offset: 0px;
             }
         }
 
@@ -23,7 +23,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            gap: 5px;
+            gap: 1px;
         }
 
         .white-key, .black-key {
@@ -42,7 +42,7 @@
             background-color: #000;
             color: #fff;
             margin-left: var(--black-key-offset);
-            z-index: 2;
+            z-index: -1;
         }
 
         /* Adjust positions of black keys */
