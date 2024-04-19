@@ -1,19 +1,6 @@
-// Get all keys
-const keys = document.querySelectorAll('.white-key, .black-key');
-
-// Add click event listener to each key
-keys.forEach(key => {
-    key.addEventListener('click', () => {
-        const note = key.getAttribute('data-note');
-        playAudio(note);
-    });
-});
-
-// Function to play audio
-function playAudio(note) {
-    const audio = document.getElementById(note);
-    if (audio) {
-        audio.currentTime = 0; // Reset audio to start
-        audio.play();
-    }
+// script.js
+function playSound(note) {
+    // Implement logic to play the computerized sound for the given note
+    console.log(`Playing sound for note: ${note}`);
+    // You can use external libraries or APIs to play the sound
 }
