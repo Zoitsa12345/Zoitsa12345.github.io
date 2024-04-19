@@ -57,18 +57,13 @@
     <div class="circle e" onclick="playSound('E-piano.wav')">E</div>
 
 <!-- Volume control -->
-    <div id="volume-container">
+ <div id="volume-container">
         <button id="volume-down" onclick="adjustVolume(-0.1)">-</button>
         <input type="range" id="volume-slider" max="1" min="0" step="0.01" value="1" onchange="setVolume(this.value)">
         <button id="volume-up" onclick="adjustVolume(0.1)">+</button>
     </div>
     
     <script>
-        function playSound(soundFile) {
-            const audio = new Audio(soundFile);
-            audio.play();
-        }
-
         // Adjust volume
         function adjustVolume(change) {
             const volumeSlider = document.getElementById('volume-slider');
@@ -78,8 +73,16 @@
 
         // Set volume
         function setVolume(volume) {
-            const audio = document.getElementById('audio-element');
-            audio.volume = volume;
+            const audioElements = document.querySelectorAll('audio');
+            audioElements.forEach((audio) => {
+                audio.volume = volume;
+            });
+        }
+
+        // Play sound
+        function playSound(soundFile) {
+            const audio = new Audio(soundFile);
+            audio.play();
         }
     </script>
 </body>
