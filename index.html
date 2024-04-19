@@ -36,6 +36,19 @@
         .circle.e {
             background-color: #32cd32; /* Green for E */
         }
+
+ /* Volume control */
+        #volume-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #volume-down, #volume-up {
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        
     </style>
 </head>
 <body>
@@ -43,10 +56,30 @@
     <div class="circle d" onclick="playSound('D-piano.wav')">D</div>
     <div class="circle e" onclick="playSound('E-piano.wav')">E</div>
 
+<!-- Volume control -->
+    <div id="volume-container">
+        <button id="volume-down" onclick="adjustVolume(-0.1)">-</button>
+        <input type="range" id="volume-slider" max="1" min="0" step="0.01" value="1" onchange="setVolume(this.value)">
+        <button id="volume-up" onclick="adjustVolume(0.1)">+</button>
+    </div>
+    
     <script>
         function playSound(soundFile) {
             const audio = new Audio(soundFile);
             audio.play();
+        }
+
+        // Adjust volume
+        function adjustVolume(change) {
+            const volumeSlider = document.getElementById('volume-slider');
+            const newVolume = parseFloat(volumeSlider.value) + change;
+            setVolume(newVolume);
+        }
+
+        // Set volume
+        function setVolume(volume) {
+            const audio = document.getElementById('audio-element');
+            audio.volume = volume;
         }
     </script>
 </body>
