@@ -3,83 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piano</title>
-    <style>
-        :root {
-            --key-width: 20px;
-            --key-height: 100px;
-            --black-key-offset: 0px;
-        }
-
-        @media (max-width: 600px) {
-            :root {
-                --key-width: 20px;
-                --key-height: 100px;
-                --black-key-offset: 0px;
-            }
-        }
-
-        .piano {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 1px;
-        }
-
-        .white-key, .black-key {
-            width: var(--key-width);
-            height: var(--key-height);
-            border: 1px solid #000;
-            background-color: #fff;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-        }
-
-        .black-key {
-            background-color: #000;
-            color: #fff;
-            border: 1px solid #666;
-            margin-left: var(--black-key-offset);
-            z-index: -1;
-        }
-
-        /* Adjust positions of black keys */
-        [data-note="C#"] { left: calc(3 * var(--key-width)); }
-        [data-note="D#"] { left: calc(4 * var(--key-width)); }
-        [data-note="F#"] { left: calc(6 * var(--key-width)); }
-        [data-note="G#"] { left: calc(7 * var(--key-width)); }
-        [data-note="A#"] { left: calc(8 * var(--key-width)); }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Music Keyboard</title>
 </head>
 <body>
-    <div class="piano">
-        <!-- White keys -->
-        <div class="white-key" data-note="C">C</div>
-        <div class="white-key" data-note="D">D</div>
-        <div class="white-key" data-note="E">E</div>
-        <div class="white-key" data-note="F">F</div>
-        <div class="white-key" data-note="G">G</div>
-        <div class="white-key" data-note="A">A</div>
-        <div class="white-key" data-note="B">B</div>
-
-        <!-- Black keys -->
-        <div class="black-key" data-note="C#">C#</div>
-        <div class="black-key" data-note="D#">D#</div>
-        <div class="black-key" data-note="F#">F#</div>
-        <div class="black-key" data-note="G#">G#</div>
-        <div class="black-key" data-note="A#">A#</div>
+    <div class="keyboard">
+        <div class="white-key">C</div>
+        <div class="black-key">C#</div>
+        <div class="white-key">D</div>
+        <div class="black-key">D#</div>
+        <div class="white-key">E</div>
+        <div class="white-key">F</div>
+        <div class="black-key">F#</div>
+        <div class="white-key">G</div>
+        <div class="black-key">G#</div>
+        <div class="white-key">A</div>
+        <div class="black-key">A#</div>
+        <div class="white-key">B</div>
     </div>
-
-    <!-- Audio files for each note -->
-    <audio id="C" src="C-piano.wav"></audio>
-    <audio id="D" src="D-piano.wav"></audio>
-    <audio id="E" src="E-piano.wav"></audio>
-    <!-- Add more audio files for other notes -->
-
-    <script src="script.js"></script>
 </body>
 </html>
+
+
 
